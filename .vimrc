@@ -1,6 +1,12 @@
  set nocompatible               " be iMproved
  filetype off                   " required!
  set number
+ set ruler
+ set hlsearch  " Highlight search terms
+ set incsearch " ...dynamically as they are typed.
+ set wildmenu                  " lets you see what your other options are
+ set wildmode=list:longest " to have the completion behave similarly to a shell
+
  syntax on
  let $GIT_SSL_NO_VERIFY = 'true'
  let NERDTreeDirArrows=0
@@ -15,19 +21,28 @@
  " My Bundles here:
  "
  " original repos on github
- Bundle 'tpope/vim-fugitive'
  Bundle 'Lokaltog/vim-easymotion'
  " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  Bundle 'tpope/vim-rails.git'
+ Bundle 'tpope/vim-fugitive'
+ Bundle 'tpope/vim-surround'
+ Bundle 'tpope/vim-haml'
+ Bundle 'tpope/vim-endwise'
+ Bundle 'tpope/vim-cucumber'
  Bundle 'scrooloose/nerdtree'
  Bundle 'kchmck/vim-coffee-script'
- Bundle 'tpope/vim-cucumber'
- Bundle 'tpope/vim-haml'
+ Bundle 'ap/vim-css-color'
  " vim-scripts repos
  Bundle 'L9'
  Bundle 'FuzzyFinder'
  " non github repos
- Bundle 'https://git.wincent.com/command-t.git'
+ "Bundle 'https://git.wincent.com/command-t.git'
+ Bundle 'wincent/Command-T'
+ Bundle 'majutsushi/tagbar'
+
+ " Systax check
+ Bundle 'scrooloose/syntastic'
+
 
 
 
@@ -42,6 +57,10 @@
  Bundle "garbas/vim-snipmate"
  "----------------------------------------------
 
+
+ "Map commands
+ nmap ff :FufFile<CR>
+ nmap fl :FufLine<CR>
 
 
  filetype plugin indent on     " required!
