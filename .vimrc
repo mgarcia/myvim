@@ -1,6 +1,6 @@
  set nocompatible               " be iMproved
  filetype off                   " required!
- set number
+ "set number
  set ruler
  set hlsearch  " Highlight search terms
  set incsearch " ...dynamically as they are typed.
