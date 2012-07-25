@@ -1,15 +1,30 @@
  set nocompatible               " be iMproved
  filetype off                   " required!
+ syntax on
+ syntax enable
  "set number
  set ruler
  set hlsearch  " Highlight search terms
- set incsearch " ...dynamically as they are typed.
- set wildmenu                  " lets you see what your other options are
+ set incsearch " jumps to search word as you type 
+ set wildmenu              " lets you see what your other options are
  set wildmode=list:longest " to have the completion behave similarly to a shell
+ set ignorecase
+ set ignorecase " you nearly always want this
+ "set encoding=utf-8
+ "set fillchars+=stl:\ ,stlnc:\
+ set laststatus=2
+ set ts=2
+ set sw=2
 
- syntax on
  let $GIT_SSL_NO_VERIFY = 'true'
  let NERDTreeDirArrows=0
+ let g:tagbar_ctags_bin = '/usr/bin/ctags'
+
+ " PowerLine
+ "let g:Powerline_symbols = 'fancy'
+
+ "CoffeeScript files
+ autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 ts=2 expandtab filetype=coffee
 
  set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
@@ -43,6 +58,9 @@
  " Systax check
  Bundle 'scrooloose/syntastic'
 
+ " more functional vim statuslines
+ Bundle 'Lokaltog/vim-powerline'
+
 
 
 
@@ -59,9 +77,8 @@
 
 
  "Map commands
- nmap ff :FufFile<CR>
+ nmap ff :FufFile **/<CR>
  nmap fl :FufLine<CR>
-
 
  filetype plugin indent on     " required!
  "
