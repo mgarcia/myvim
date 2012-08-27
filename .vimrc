@@ -62,6 +62,11 @@
  nmap ff :FufFile<CR>
  nmap fl :FufLine<CR>
 
+ " JavaScript (tab width 4 chr, wrap at 79th)
+ autocmd FileType javascript set sw=4
+ autocmd FileType javascript set ts=4
+ autocmd FileType javascript set sts=4
+ autocmd FileType javascript set textwidth=79
 
  filetype plugin indent on     " required!
  "
