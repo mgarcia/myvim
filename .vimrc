@@ -1,4 +1,5 @@
  set nocompatible               " be iMproved
+
  filetype off                   " required!
  "set number
  set ruler
@@ -44,6 +45,10 @@
  Bundle 'scrooloose/syntastic'
 
 
+ " Automatic closing quotes parenthesis, brackets, ...
+ "Bundle 'Raimondi/deliMate'
+
+
 
 
  "----------------------------------------------
@@ -68,7 +73,23 @@
  autocmd FileType javascript set sts=4
  autocmd FileType javascript set textwidth=79
 
- filetype plugin indent on     " required!
+ " Python (tab width 4 chr, wrap at 79th)
+ autocmd FileType python set omnifunc=pythoncomplete#Complete
+ autocmd FileType python set shiftwidth=4
+ autocmd FileType python set tabstop=4
+ autocmd FileType python set softtabstop=4
+ autocmd FileType python set textwidth=79
+ autocmd FileType python set shiftround
+ autocmd FileType python set expandtab
+
+ " Automatic reloading of .vimrc when save it
+ "autocmd bufferwritepost .vimrc source %
+
+ " Tab navigation
+ map <Leader>p <esc>:tabprevious<CR>
+ map <Leader>n <esc>:tabnext<CR>
+
+ filetype plugin indent on     " identation on
  "
  " Brief help
  " :BundleList          - list configured bundles
