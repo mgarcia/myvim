@@ -91,6 +91,12 @@
  autocmd FileType javascript set sts=4
  autocmd FileType javascript set textwidth=79
 
+ " Perl (tab width 4 chr, wrap at 79th)
+ autocmd FileType perl set sw=4
+ autocmd FileType perl set ts=4
+ autocmd FileType perl set sts=4
+ autocmd FileType perl set textwidth=79
+
  " Python (tab width 4 chr, wrap at 79th)
  autocmd FileType python set omnifunc=pythoncomplete#Complete
  autocmd FileType python set shiftwidth=4
