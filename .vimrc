@@ -66,9 +66,6 @@
  " Automatic closing quotes parenthesis, brackets, ...
  "Bundle 'Raimondi/deliMate'
 
-
-
-
  "----------------------------------------------
  " SnipMate
  "Install dependencies:
@@ -80,6 +77,8 @@
  Bundle "garbas/vim-snipmate"
  "----------------------------------------------
 
+ " vim shell
+ Bundle 'Shougo/vimshell'
 
  "Map commands
  nmap ff :FufFile **/<CR>
