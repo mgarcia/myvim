@@ -16,6 +16,7 @@
  set laststatus=2
  set ts=2
  set sw=2
+ 
 
  let $GIT_SSL_NO_VERIFY = 'true'
  let NERDTreeDirArrows=0
@@ -86,25 +87,31 @@
 
  filetype plugin indent on     " required!
  " JavaScript (tab width 4 chr, wrap at 79th)
- autocmd FileType javascript set sw=4
- autocmd FileType javascript set ts=4
- autocmd FileType javascript set sts=4
+ autocmd FileType javascript set sw=2
+ autocmd FileType javascript set ts=2
+ autocmd FileType javascript set sts=2
  autocmd FileType javascript set textwidth=79
+ autocmd FileType javascript set expandtab
+ autocmd FileType javascript set smarttab
 
  " Perl (tab width 4 chr, wrap at 79th)
- autocmd FileType perl set sw=4
- autocmd FileType perl set ts=4
- autocmd FileType perl set sts=4
+ autocmd FileType perl set sw=2
+ autocmd FileType perl set ts=2
+ autocmd FileType perl set sts=2
  autocmd FileType perl set textwidth=79
+ autocmd FileType perl set shiftround
+ autocmd FileType perl set expandtab
+ autocmd FileType perl set smarttab
 
  " Python (tab width 4 chr, wrap at 79th)
  autocmd FileType python set omnifunc=pythoncomplete#Complete
- autocmd FileType python set shiftwidth=4
- autocmd FileType python set tabstop=4
- autocmd FileType python set softtabstop=4
+ autocmd FileType python set shiftwidth=2
+ autocmd FileType python set tabstop=2
+ autocmd FileType python set softtabstop=2
  autocmd FileType python set textwidth=79
  autocmd FileType python set shiftround
  autocmd FileType python set expandtab
+ autocmd FileType python set smarttab
 
  " Automatic reloading of .vimrc when save it
  "autocmd bufferwritepost .vimrc source %
